@@ -49,11 +49,19 @@ button {
 }
 
 
+<<<<<<< HEAD
 
 .display-images img {
     width: 150px;
     height: auto;
     margin: 7px;
+=======
+.display-images img {
+    width: 100px;
+    height: auto;
+    margin: 7px;
+
+>>>>>>> 424e6158beb8d446a2e8875126ea54aae2aea2d1
 }
 
 .display-titles {
