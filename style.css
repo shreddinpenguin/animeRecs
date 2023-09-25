@@ -57,3 +57,7 @@ button {
     margin: 7px;
     filter: drop-shadow(0 0 1em #c93642)
 }
+
+.display-titles {
+    color: whitesmoke;
+}
