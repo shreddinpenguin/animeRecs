@@ -51,3 +51,8 @@ button {
 #tpicksline {
     margin-right: auto;
 }
+.display-images img {
+    width: 100px;
+    height: auto;
+    margin: 7px;
+}
