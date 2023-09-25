@@ -48,16 +48,19 @@ button {
     font-family: 'Fantsy copperplate', cursive;
 }
 
-#tpicksline {
-    margin-right: auto;
-}
 
-#anime-info img {
+
+.display-images img {
+    width: 150px;
     height: auto;
     margin: 7px;
-    filter: drop-shadow(0 0 1em #c93642)
 }
 
 .display-titles {
     color: whitesmoke;
 }
+
+.line {
+    margin-right: 30%;
+}
+

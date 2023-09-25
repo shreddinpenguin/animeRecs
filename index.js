@@ -51,3 +51,7 @@ const renderDannyPicks = (anime)=>{
     // })
     document.querySelector("#danny-picks").append(img)
 }
+
+// document.querySelector(".display-images").addEventListener("mouseover", () => {
+//     nav.display-images.img =
+// })
