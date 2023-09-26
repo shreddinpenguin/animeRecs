@@ -66,7 +66,7 @@ footer {
 }
 
 .grid-container {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -165,7 +165,7 @@ button {
     display: flex;
     justify-content: center;
     margin: auto;
-    width: 200px;
+    width: 300px;
     height: auto;
 }
 
