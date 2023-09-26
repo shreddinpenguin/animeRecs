@@ -1,4 +1,4 @@
-#title-header {
+#title_header {
     font-style: italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3rem;
@@ -54,7 +54,7 @@ footer {
 }
 
 .imageTile:hover{
-    border: whitesmoke solid 2px;
+    /* border: black solid 6px; */
     height: 300px;
     width: 200px;
 }
@@ -63,9 +63,12 @@ footer {
     width: 100px;
     height: 150px;
     margin: 7px;
+    justify-content: flex-start;
+    border: 3px solid white;
+    display: flex;
 }
 
-.grid-container {
+.bigflex-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }

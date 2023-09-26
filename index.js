@@ -10,7 +10,7 @@ const animeYear = document.querySelector("#year-aired")
 const animeDescription = document.querySelector("#description")
 const watched = document.querySelector("#watched")
 const animeEpisodes = document.querySelector("#episode-count")
-const titleHeader = document.querySelector("#title-header")
+const titleHeader = document.querySelector("#title_header")
 let currentAnime;
 // Loads the three api's from the db.json
 document.addEventListener("DOMContentLoaded", () => {
