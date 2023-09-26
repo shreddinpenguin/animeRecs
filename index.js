@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 const renderTopPicks = (animes)=>{
     animes.forEach(anime => {
         let img = document.createElement("img")
+        img.className = "imageTile"
         img.src = anime.image
         img.addEventListener("click", ()=>{
             displayInfo(anime)
@@ -64,6 +65,7 @@ const renderTopPicks = (animes)=>{
 const renderTaylorPicks = (animes)=>{
     animes.forEach(anime => {
         let img = document.createElement("img")
+        img.className = "imageTile"
         img.src = anime.image
         img.addEventListener("click", ()=>{
             displayInfo(anime)
@@ -74,6 +76,7 @@ const renderTaylorPicks = (animes)=>{
 const renderDannyPicks = (animes)=>{
     animes.forEach(anime => {
         let img = document.createElement("img")
+        img.className = "imageTile"
         img.src = anime.image
         img.addEventListener("click", ()=>{
             displayInfo(anime)

@@ -3,11 +3,12 @@
     flex-direction: column;
     /* justify-content: center; */
     flex-wrap: wrap;
+
 }
 
 .flexbox-titles {
     /* background-color: #000000; */
-    margin: auto;
+    /* margin: auto; */
     justify-content: flex-start;
     /* border: 3px solid white; */
 }
@@ -22,7 +23,7 @@
 }
 
 .flexbox-display {
-    border: 3px solid whitesmoke;
+    border: 3px solid black;
     margin: 10px;
     align-items: center;
     flex-direction: column;
@@ -35,18 +36,27 @@
     margin: 7px;
     justify-content: center;
     align-items: center;
+    margin-top: 7px;
+}
+
+.imageTile:hover{
+    height: 300px;
+    width: 200px;
 }
 
 body {
     /* background-color: #0A0b2b; */
-    background-color: #8f0505;
+    background-color: #e3e3e3;
 }
 
 .flexbox-titles img {
     width: 100px;
-    height: auto;
+    height: 150px;
     margin: 7px;
     justify-content: flex-start;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 #title_header {
@@ -77,25 +87,25 @@ body {
 
 #title {
     text-align: center;
-    color: whitesmoke;
+    color: black;
 }
 
 #description {
     text-align: center;
-    color: whitesmoke;
+    color: black;
     /* justify-content: space-around; */
 }
 #year-aired {
     text-align: center;
-    color: whitesmoke;
+    color: black;
 }
 #episode-count {
     text-align: center;
-    color: whitesmoke;
+    color: black;
     align-items: center;
 }
 .display-titles {
-    color: whitesmoke;
+    color: black;
 }
 #detail-image {
     display: flex;
@@ -116,13 +126,13 @@ body {
     margin: auto;
 }
 header {
-    background-color: black;
+    background-color: #1877f2;
     justify-content: center;
     display: flex;
 }
 
 footer {
-    background-color: black;
+    background-color: #1877f2;
     margin: auto;
     display: flex;
     margin-bottom: 0px;
@@ -130,4 +140,7 @@ footer {
 
 #thick-line {
     margin: 60px;
+}
+#black {
+    color:black;
 }
