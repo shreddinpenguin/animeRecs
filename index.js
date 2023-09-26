@@ -13,56 +13,73 @@ const animeEpisodes = document.querySelector("#episode-count")
 let currentAnime;
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    fetch(topRanked)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(anime => {
-            renderTopPicks(anime)
+    Promise.all([
+        fetch(topRanked).then(res => res.json()),
+        fetch(taylorPicks).then(res => res.json()),
+        fetch(dannyPicks).then(res => res.json())
+    ])
+        .then(data => {
+            renderTopPicks(data[0])
+            renderDannyPicks(data[2])
+            renderTaylorPicks(data[1])
+            displayInfo(data[0][0])
         })
-        displayInfo(data)
-    })
-    fetch(taylorPicks)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(anime => {
-            renderTaylorPicks(anime)
-        })
-        displayInfo(data)
-    })
-    fetch(dannyPicks)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(anime => {
-            renderDannyPicks(anime)
-        })
-        displayInfo(data)
-    })
+
+    // fetch(topRanked)
+    // .then(res => res.json())
+    // .then(data => {
+    //     data.forEach(anime => {
+    //         renderTopPicks(anime)
+    //     })
+    //     displayInfo(data)
+    // })
+    // fetch(taylorPicks)
+    // .then(res => res.json())
+    // .then(data => {
+    //     data.forEach(anime => {
+    //         renderTaylorPicks(anime)
+    //     })
+    //     displayInfo(data)
+    // })
+    // fetch(dannyPicks)
+    // .then(res => res.json())
+    // .then(data => {
+    //     data.forEach(anime => {
+    //         renderDannyPicks(anime)
+    //     })
+    //     displayInfo(data)
+    // })
 })
 
-const renderTopPicks = (anime)=>{
-    let img = document.createElement("img")
-    img.src = anime.image
-    img.addEventListener("click", ()=>{
-        displayInfo(anime)
+const renderTopPicks = (animes)=>{
+    animes.forEach(anime => {
+        let img = document.createElement("img")
+        img.src = anime.image
+        img.addEventListener("click", ()=>{
+            displayInfo(anime)
+        })
+        document.querySelector("#top-picks").append(img)
     })
-    document.querySelector("#top-picks").append(img)
 }
-const renderTaylorPicks = (anime)=>{
-    let img = document.createElement("img")
-    img.src = anime.image
-    img.addEventListener("click", ()=>{
-        displayInfo(anime)
+const renderTaylorPicks = (animes)=>{
+    animes.forEach(anime => {
+        let img = document.createElement("img")
+        img.src = anime.image
+        img.addEventListener("click", ()=>{
+            displayInfo(anime)
+        })
+        document.querySelector("#taylor-picks").append(img)
     })
-    document.querySelector("#taylor-picks").append(img)
 }
-
-const renderDannyPicks = (anime)=>{
-    let img = document.createElement("img")
-    img.src = anime.image
-    img.addEventListener("click", ()=>{
-        displayInfo(anime)
+const renderDannyPicks = (animes)=>{
+    animes.forEach(anime => {
+        let img = document.createElement("img")
+        img.src = anime.image
+        img.addEventListener("click", ()=>{
+            displayInfo(anime)
+        })
+        document.querySelector("#danny-picks").append(img)
     })
-    document.querySelector("#danny-picks").append(img)
 }
 
 // document.querySelector(".display-images").addEventListener("mouseover", () => {

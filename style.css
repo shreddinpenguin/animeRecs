@@ -1,64 +1,134 @@
-#title-header {
-    font-style: italic;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3rem;
-    color: whitesmoke;
+.flexbox-container-left {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+}
+
+.flexbox-titles {
+    /* background-color: #000000; */
+    margin: auto;
+    justify-content: flex-start;
+    /* border: 3px solid white; */
+}
+
+.flexbox-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.flexbox-display {
+    border: 3px solid whitesmoke;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexbox-display img {
+    display: flex;
+    width: 150px;
+    height: auto;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
-    background-color: #0A0B2B;
+    /* background-color: #0A0b2b; */
+    background-color: #8f0505;
+}
+
+.flexbox-titles img {
+    width: 100px;
+    height: auto;
+    margin: 7px;
+    justify-content: flex-start;
+}
+
+#title_header {
+    color:whitesmoke;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+}
+
+.bigflex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#top-picks {
+   display: flex;
+}
+
+#danny-picks {
+    display: flex;
+}
+
+#taylor-picks {
+    display: flex;
 }
 
 #title {
-    text-align: end;
-    color: whitesmoke;
-}
-
-#year-aired {
-    text-align: end;
+    text-align: center;
     color: whitesmoke;
 }
 
 #description {
-    text-align: end;
+    text-align: center;
+    color: whitesmoke;
+    /* justify-content: space-around; */
+}
+#year-aired {
+    text-align: center;
     color: whitesmoke;
 }
-
 #episode-count {
-    text-align: end;
+    text-align: center;
     color: whitesmoke;
+    align-items: center;
 }
-
-#display-picks {
-    justify-content: space-between;
-}
-
-#anime-info {
-    text-align: justify;
-}
-
-button {
-    border: 0;
-    width:150px;
-    color: black;
-    background: red; 
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: 'Fantsy copperplate', cursive;
-}
-
-.display-images img {
-    width: 150px;
-    height: auto;
-    margin: 7px;
-}
-
 .display-titles {
     color: whitesmoke;
 }
+#detail-image {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 300px;
+    height: auto;
+}
+#anime-info {
+    justify-content: center;
+    align-items: center;
 
-.line {
-    margin-right: 30%;
+}
+#watched {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+header {
+    background-color: black;
+    justify-content: center;
+    display: flex;
 }
 
+footer {
+    background-color: black;
+    margin: auto;
+    display: flex;
+    margin-bottom: 0px;
+}
+
+#thick-line {
+    margin: 60px;
+}

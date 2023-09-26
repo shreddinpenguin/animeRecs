@@ -26,11 +26,29 @@
             "watched": false,
             "episode_count": 1075,
             "aired": 1999
+        },
+        {
+            "id": 4,
+            "Title": "Dragon Ball Z",
+            "image": "https://m.media-amazon.com/images/M/MV5BNGM5MTEyZDItZWNhOS00NzNkLTgwZTAtNWIzY2IzZmExOWMxXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
+            "description": "Goku—the strongest fighter on the planet—is all that stands between humanity and villains from the darkest corners of space. Joined in battle by the Z-Fighters, Goku travels to distant realms in search of the magic powers of the seven Dragon Balls!",
+            "watched": false,
+            "episode_count": 291,
+            "aired": 1989
+        },
+        {
+            "id": 5,
+            "Title": "Naruto: Shippuden",
+            "image": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
+            "description": "Naruto Uzumaki wants to be the best ninja in the land. He's done well so far, but with the looming danger posed by the mysterious Akatsuki organization, Naruto knows he must train harder than ever and leaves his village for intense exercises that will push him to his limits.",
+            "watched": false,
+            "episode_count": 501,
+            "aired": 2007
         }
     ],
     "dannyPicks": [
         {
-            "id": 4,
+            "id": 6,
             "Title": "Jujutsu Kaisen",
             "image": "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/77fb4ad8d5c781685695bc574eb34b0a.jpe",
             "description": "Yuji Itadori is a boy with tremendous physical strength, though he lives a completely ordinary high school life. One day, to save a classmate who has been attacked by curses, he eats the finger of Ryomen Sukuna, taking the curse into his own soul. From then on, he shares one body with Ryomen Sukuna. Guided by the most powerful of sorcerers, Satoru Gojo, Itadori is admitted to Tokyo Jujutsu High School, an organization that fights the curses... and thus begins the heroic tale of a boy who became a curse to exorcise a curse, a life from which he could never turn back.",
@@ -39,7 +57,7 @@
             "aired": 2020
         },
         {
-            "id": 5,
+            "id": 7,
             "Title": "Demon Slayer",
             "image": "https://demonslayer-anime.com/assets_portal/img/main/img_katanakaji4.jpg",
             "description": "A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.",
@@ -48,18 +66,36 @@
             "aired": 2019
         },
         {
-            "id": 6,
+            "id": 8,
             "Title": "Black Clover",
             "image": "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/e108ae17d8d0407417cac40eb52d849a.jpe",
             "description": "Asta and Yuno were abandoned together at the same church and have been inseparable since. As children, they promised that they would compete against each other to see who would become the next Wizard King.",
             "watched": false,
             "episode_count": 170,
             "aired": 2017
+        },
+        {
+            "id": 9,
+            "Title": "Hunter x Hunter",
+            "image": "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/cbb55a6382682bf71e91f685c6473c5a.jpe",
+            "description": "Gon, a young boy who lives on Whale Island, dreams of becoming a Hunter like his father, who left when Gon was still young.",
+            "watched": false,
+            "episode_count": 148,
+            "aired": 2011
+        },
+        {
+            "id": 10,
+            "Title": "Vinland Saga",
+            "image": "https://m.media-amazon.com/images/M/MV5BNzQwODI4Y2YtNjFmNC00NTExLWE0NzYtMTUzNjA0YzBhY2YyXkEyXkFqcGdeQXVyMTMxMTYzNDkz._V1_.jpg",
+            "description": "Thorfinn pursues a journey with his father's killer in order to take revenge and end his life in a duel as an honorable warrior and pay his father an homage.",
+            "watched": false,
+            "episode_count": 48,
+            "aired": 2019
         }
     ],
     "taylorPicks": [
         {
-            "id": 7,
+            "id": 11,
             "Title": "Tokyo Ghoul",
             "image": "https://m.media-amazon.com/images/M/MV5BN2E2OTgzODktMjBhYy00MjJjLWI0OTgtNGYxOGNhMWMxOWE4XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
             "description": "A Tokyo college student is attacked by a ghoul, a superpowered human who feeds on human flesh. He survives, but has become part ghoul and becomes a fugitive on the run.",
@@ -68,7 +104,7 @@
             "aired": 2014
         },
         {
-            "id": 8,
+            "id": 12,
             "Title": "Tokyo Revengers",
             "image": "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/70975a1227b453c1caf24fa05a93617d.jpe",
             "description": "Hanagaki Takemichi lives an unsatisfying life right up until his death. Waking up 12 years in the past, he reckons with the eventual fate of his friends and tries to prevent an unfortunate future.",
@@ -77,13 +113,31 @@
             "aired": 2021
         },
         {
-            "id": 9,
+            "id": 13,
             "Title": "Neon Genesis Evangelion",
             "image": "https://m.media-amazon.com/images/M/MV5BMGRlZTIwZjQtZWU2NC00MDYzLTg0YWUtOGY3YjU4NTUzOTU1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
             "description": "When violent monsters descend upon Earth to destroy humanity, a reluctant young man joins a small squad of pilots under the command of his cold and dictatorial father to drive back the menace using giant machines that seem to have minds of their own.",
             "watched": false,
             "episode_count": 26,
             "aired": 1995
+        },
+        {
+            "id": 14,
+            "Title": "Akame Ga Kill",
+            "image": "https://m.media-amazon.com/images/M/MV5BZjU2ZDZkYmMtYTA3Yi00NTZkLTgzYjgtOTRhMTFiOWFkODZmXkEyXkFqcGdeQXVyNjkyODc3NjQ@._V1_FMjpg_UX1000_.jpg",
+            "description": "A countryside boy named Tatsumi sets out on a journey to The Capital to make a name for himself and met a seemingly dangerous group of Assassins known as Night Raid. Their journey begins.",
+            "watched": false,
+            "episode_count": 24,
+            "aired": 2014
+        },
+        {
+            "id": 15,
+            "Title": "The Future Diary",
+            "image": "https://m.media-amazon.com/images/M/MV5BMjExOWYzMTQtMjYzNi00MmU0LWJiZDctMmNmZmFhNGI5MWI0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
+            "description": "A young man competes with people around the world for a chance to become the succesor of God, with a diary that is able to tell the future.",
+            "watched": false,
+            "episode_count": 27,
+            "aired": 2011
         }
     ]
 }
