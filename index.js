@@ -10,45 +10,22 @@ const animeYear = document.querySelector("#year-aired")
 const animeDescription = document.querySelector("#description")
 const watched = document.querySelector("#watched")
 const animeEpisodes = document.querySelector("#episode-count")
+const titleHeader = document.querySelector("#title-header")
 let currentAnime;
 
 document.addEventListener("DOMContentLoaded", () => {
     Promise.all([
-        fetch("http://localhost:3000/topRanked").then(res => res.json()),
-        fetch("http://localhost:3000/dannyPicks").then(res => res.json()),
-        fetch("http://localhost:3000/taylorPicks").then(res => res.json())
+        fetch(topRanked).then(res => res.json()),
+        fetch(dannyPicks).then(res => res.json()),
+        fetch(taylorPicks).then(res => res.json())
     ])
         .then(data => {
             renderTopPicks(data[0])
             renderDannyPicks(data[1])
             renderTaylorPicks(data[2])
-
-            // data.forEach(animes => {
-            //     console.log(animes)
-            //     // if (animes[0])
-            //     // animes[0].forEach(anime => renderTopPicks(anime))
-
-            //     // renderDannyPicks(anime)
-            // })
             console.log(data)
             displayInfo(data[0][0])
         })
-    // fetch(taylorPicks)
-    // .then(res => res.json())
-    // .then(data => {
-    //     data.forEach(anime => {
-    //         renderTaylorPicks(anime)
-    //     })
-    //     displayInfo(data)
-    // })
-    // fetch(dannyPicks)
-    // .then(res => res.json())
-    // .then(data => {
-    //     data.forEach(anime => {
-    //         renderDannyPicks(anime)
-    //     })
-    //     displayInfo(data)
-    // })
 })
 
 const renderTopPicks = (animes) => {
@@ -111,3 +88,13 @@ function watchedUnwatched(event) {
         return "Unwatched"
     }
 }
+
+titleHeader.addEventListener("mouseover",(e)=>{
+    titleHeader.className="text-focus-in"
+    console.log(titleHeader.className)
+})
+
+titleHeader.addEventListener("mouseout",(e)=>{
+    titleHeader.className=""
+    console.log(titleHeader.className)
+})
