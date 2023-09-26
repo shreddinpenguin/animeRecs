@@ -5,6 +5,71 @@
     color: whitesmoke;
 }
 
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: black;
+    margin: auto;
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.flexbox-container-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.flexbox-titles {
+    margin: 10px;
+}
+
+.flexbox-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flexbox-display {
+    border: 3px solid whitesmoke;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-display img {
+    width: 150px;
+    height: auto;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageTile:hover{
+    border: whitesmoke solid 2px;
+    height: 300px;
+    width: 200px;
+}
+
+.flexbox-titles img {
+    width: 100px;
+    height: 150px;
+    margin: 7px;
+}
+
+.grid-container {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+}
+
 .text-focus-in {
 	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -33,29 +98,43 @@
               filter: blur(0px);
       opacity: 1;
     }
-  }
+}
+
+#top-picks {
+    display: flex;
+}
+
+#danny-picks {
+    display: flex;
+}
+
+#taylor-picks {
+    display: flex;
+}
 
 body {
-    background-color: #0A0B2B;
+    background-color: #8f0505;
+    /* margin: auto; */
 }
 
 #title {
-    text-align: start;
+    text-align: center;
     color: whitesmoke;
 }
 
 #year-aired {
-    text-align: start;
+    text-align: center;
     color: whitesmoke;
 }
 
 #description {
+    display: flex;
     text-align: start;
     color: whitesmoke;
 }
 
 #episode-count {
-    text-align: start;
+    text-align: center;
     color: whitesmoke;
 }
 
@@ -64,38 +143,38 @@ body {
 }
 
 #anime-info {
-    text-align: justify;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
     border: 0;
     width:150px;
-    color: black;
-    background: red; 
+    color: whitesmoke;
+    background: black; 
     padding: 10px;
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Fantsy copperplate', cursive;
 }
 
-.display-images img {
-    width: 150px;
-    height: auto;
-    margin: 7px;
-}
-
 #detail-image {
-    align-content: end;
-    width: 150px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 200px;
     height: auto;
-    margin: 7px;
 }
 
 .display-titles {
     color: whitesmoke;
 }
 
-.line {
-    margin-right: 30%;
+#thick-line {
+    margin: 60px;
 }
+
 

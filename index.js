@@ -12,13 +12,14 @@ const watched = document.querySelector("#watched")
 const animeEpisodes = document.querySelector("#episode-count")
 const titleHeader = document.querySelector("#title-header")
 let currentAnime;
-
+// Loads the three api's from the db.json
 document.addEventListener("DOMContentLoaded", () => {
     Promise.all([
         fetch(topRanked).then(res => res.json()),
         fetch(dannyPicks).then(res => res.json()),
         fetch(taylorPicks).then(res => res.json())
     ])
+    // displays the images for the top picks, taylor picks, and danny picks. Also displays the first info for top picks
         .then(data => {
             renderTopPicks(data[0])
             renderDannyPicks(data[1])
@@ -27,10 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
             displayInfo(data[0][0])
         })
 })
-
+// variable arrow function that cycles through the top picks info and pulls the image contents and displays them when called
 const renderTopPicks = (animes) => {
     animes.forEach(anime => {
         let img = document.createElement("img")
+        img.className = "imageTile"
         img.src = anime.image
         img.addEventListener("click", () => {
             displayInfo(anime)
@@ -38,9 +40,11 @@ const renderTopPicks = (animes) => {
         document.querySelector("#top-picks").append(img)
     })
 }
+// variable arrow function that cycles through the taylor picks info and pulls the image contents and displays them when called
 const renderTaylorPicks = (animes) => {
     animes.forEach(anime => {
         let img = document.createElement("img")
+        img.className = "imageTile"
         img.src = anime.image
         img.addEventListener("click", () => {
             displayInfo(anime)
@@ -48,10 +52,11 @@ const renderTaylorPicks = (animes) => {
         document.querySelector("#taylor-picks").append(img)
 })
 }
-
+// variable arrow function that cycles through the danny picks info and pulls the image contents and displays them when called
 const renderDannyPicks = (animes) => {
     animes.forEach(anime => {
         let img = document.createElement("img")
+        img.className = "imageTile"
         img.src = anime.image
         img.addEventListener("click", () => {
             displayInfo(anime)
@@ -59,11 +64,7 @@ const renderDannyPicks = (animes) => {
         document.querySelector("#danny-picks").append(img)
 })
 }
-
-// document.querySelector(".display-images").addEventListener("mouseover", () => {
-//     nav.display-images.img =
-// })
-
+// Assigns the db.json information to the correct id's and divs in the HTML when called
 function displayInfo(show) {
     console.log(show)
     currentAnime = show
@@ -74,12 +75,12 @@ function displayInfo(show) {
     watched.textContent = watchedUnwatched(show)
     animeEpisodes.textContent = `Episode Count: ${show.episode_count}`
 }
-
+// Simple eventlistener that assigns watched or unwatched when the button is clicked
 watched.addEventListener("click", () => {
     currentAnime.watched = !currentAnime.watched
     watched.textContent = currentAnime.watched ? "Watched" : "Unwatched"
 })
-
+// Simple function that assigns the value of watched or unwatched depending on what the value is in the watched button value
 function watchedUnwatched(event) {
     if (event.watched === true) {
         return "Watched"
@@ -88,12 +89,11 @@ function watchedUnwatched(event) {
         return "Unwatched"
     }
 }
-
+// Both of these eventlisteners create a mouseover and mouseout event that triggers a text animation for the title header 
 titleHeader.addEventListener("mouseover",(e)=>{
     titleHeader.className="text-focus-in"
     console.log(titleHeader.className)
 })
-
 titleHeader.addEventListener("mouseout",(e)=>{
     titleHeader.className=""
     console.log(titleHeader.className)
