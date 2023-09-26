@@ -113,6 +113,7 @@ body {
     margin: auto;
     width: 300px;
     height: auto;
+    margin-top: 7px;
 }
 #anime-info {
     justify-content: center;
@@ -124,6 +125,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
+    margin-bottom: 7px;
 }
 header {
     background-color: #1877f2;
