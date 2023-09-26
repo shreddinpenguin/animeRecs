@@ -10,22 +10,22 @@ body {
 }
 
 #title {
-    text-align: end;
+    text-align: start;
     color: whitesmoke;
 }
 
 #year-aired {
-    text-align: end;
+    text-align: start;
     color: whitesmoke;
 }
 
 #description {
-    text-align: end;
+    text-align: start;
     color: whitesmoke;
 }
 
 #episode-count {
-    text-align: end;
+    text-align: start;
     color: whitesmoke;
 }
 
@@ -49,6 +49,13 @@ button {
 }
 
 .display-images img {
+    width: 150px;
+    height: auto;
+    margin: 7px;
+}
+
+#detail-image {
+    align-content: end;
     width: 150px;
     height: auto;
     margin: 7px;

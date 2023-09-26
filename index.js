@@ -12,64 +12,83 @@ const watched = document.querySelector("#watched")
 const animeEpisodes = document.querySelector("#episode-count")
 let currentAnime;
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    fetch(topRanked)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(anime => {
-            renderTopPicks(anime)
+document.addEventListener("DOMContentLoaded", () => {
+    Promise.all([
+        fetch("http://localhost:3000/topRanked").then(res => res.json()),
+        fetch("http://localhost:3000/dannyPicks").then(res => res.json()),
+        fetch("http://localhost:3000/taylorPicks").then(res => res.json())
+    ])
+        .then(data => {
+            renderTopPicks(data[0])
+            renderDannyPicks(data[1])
+            renderTaylorPicks(data[2])
+
+            // data.forEach(animes => {
+            //     console.log(animes)
+            //     // if (animes[0])
+            //     // animes[0].forEach(anime => renderTopPicks(anime))
+
+            //     // renderDannyPicks(anime)
+            // })
+            console.log(data)
+            displayInfo(data[0][0])
         })
-        displayInfo(data)
-    })
-    fetch(taylorPicks)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(anime => {
-            renderTaylorPicks(anime)
-        })
-        displayInfo(data)
-    })
-    fetch(dannyPicks)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(anime => {
-            renderDannyPicks(anime)
-        })
-        displayInfo(data)
-    })
+    // fetch(taylorPicks)
+    // .then(res => res.json())
+    // .then(data => {
+    //     data.forEach(anime => {
+    //         renderTaylorPicks(anime)
+    //     })
+    //     displayInfo(data)
+    // })
+    // fetch(dannyPicks)
+    // .then(res => res.json())
+    // .then(data => {
+    //     data.forEach(anime => {
+    //         renderDannyPicks(anime)
+    //     })
+    //     displayInfo(data)
+    // })
 })
 
-const renderTopPicks = (anime)=>{
-    let img = document.createElement("img")
-    img.src = anime.image
-    img.addEventListener("click", ()=>{
-        displayInfo(anime)
+const renderTopPicks = (animes) => {
+    animes.forEach(anime => {
+        let img = document.createElement("img")
+        img.src = anime.image
+        img.addEventListener("click", () => {
+            displayInfo(anime)
+        })
+        document.querySelector("#top-picks").append(img)
     })
-    document.querySelector("#top-picks").append(img)
 }
-const renderTaylorPicks = (anime)=>{
-    let img = document.createElement("img")
-    img.src = anime.image
-    img.addEventListener("click", ()=>{
-        displayInfo(anime)
-    })
-    document.querySelector("#taylor-picks").append(img)
+const renderTaylorPicks = (animes) => {
+    animes.forEach(anime => {
+        let img = document.createElement("img")
+        img.src = anime.image
+        img.addEventListener("click", () => {
+            displayInfo(anime)
+        })
+        document.querySelector("#taylor-picks").append(img)
+})
 }
 
-const renderDannyPicks = (anime)=>{
-    let img = document.createElement("img")
-    img.src = anime.image
-    img.addEventListener("click", ()=>{
-        displayInfo(anime)
-    })
-    document.querySelector("#danny-picks").append(img)
+const renderDannyPicks = (animes) => {
+    animes.forEach(anime => {
+        let img = document.createElement("img")
+        img.src = anime.image
+        img.addEventListener("click", () => {
+            displayInfo(anime)
+        })
+        document.querySelector("#danny-picks").append(img)
+})
 }
 
 // document.querySelector(".display-images").addEventListener("mouseover", () => {
 //     nav.display-images.img =
 // })
 
-function displayInfo (show) {
+function displayInfo(show) {
+    console.log(show)
     currentAnime = show
     animeImage.src = show.image
     animeTitle.textContent = show.Title
@@ -84,11 +103,11 @@ watched.addEventListener("click", () => {
     watched.textContent = currentAnime.watched ? "Watched" : "Unwatched"
 })
 
-function watchedUnwatched (event) {
-    if (event.watched === true){
+function watchedUnwatched(event) {
+    if (event.watched === true) {
         return "Watched"
     }
-    else if (event.watched === false){
+    else if (event.watched === false) {
         return "Unwatched"
     }
 }
