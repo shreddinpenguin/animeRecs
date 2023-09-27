@@ -85,9 +85,13 @@ function displayInfo(show) {
 watched.addEventListener("click", () => {
     currentAnime.watched = !currentAnime.watched
     watched.textContent = currentAnime.watched ? "Watched" : "Unwatched"
+    // Where the update function is called
+    watchedUpdate(currentAnime)
 })
 // Simple function that assigns the value of watched or unwatched depending on what the value is in the watched button value
 function watchedUnwatched(event) {
+    console.log(event)
+    
     if (event.watched === true) {
         return "Watched"
     }
@@ -104,15 +108,15 @@ titleHeader.addEventListener("mouseout",(e)=>{
     titleHeader.className=""
     console.log(titleHeader.className)
 })
-
+// Function that generates a random number 
 function randomNumber(min, max) { 
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
-
+// Eventlistener that matches a db.json id to a random number between 1 and 15 then displays the info of the show that matches that random number when clicked
 randomAnime.addEventListener("click", () => {
     displayInfo(allAnime[randomNumber(1, 15)])
 })
-
+// Eventlistener that creates a new img tag that then gets appended to the watchlist div when the add to watchlist button is pushed
 addTo.addEventListener("click", (e) => {
     let img = document.createElement("img")
     img.className = "imageTile"
@@ -122,4 +126,30 @@ addTo.addEventListener("click", (e) => {
         img.remove()
     })
 })
+// Function that patches the watched value depending on what is displayed in the watched button 
+function watchedUpdate(event){
+    const obj = {
+        watched: event.watched
+    }
+    Promise.all([
+        fetch(`http://localhost:3000/topRanked/${event.id}`, { 
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(obj)})
+            .then(res => res.json())
+            .then(data => console.log(data)),
+        fetch(`http://localhost:3000/dannyPicks/${event.id}`, { 
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(obj)})
+            .then(res => res.json())
+            .then(data => console.log(data)),
+        fetch(`http://localhost:3000/taylorPicks/${event.id}`, { 
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(obj)})
+            .then(res => res.json())
+            .then(data => console.log(data))
+    ])  
+}
   
