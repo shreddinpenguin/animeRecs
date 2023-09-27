@@ -9,9 +9,13 @@ const animeTitle = document.querySelector("#title")
 const animeYear = document.querySelector("#year-aired")
 const animeDescription = document.querySelector("#description")
 const watched = document.querySelector("#watched")
+const randomAnime = document.querySelector("#random")
 const animeEpisodes = document.querySelector("#episode-count")
 const titleHeader = document.querySelector("#title_header")
+const addTo = document.querySelector("#add-watch")
+const watchList = document.querySelector("#watchlist")
 let currentAnime;
+let allAnime;
 // Loads the three api's from the db.json
 document.addEventListener("DOMContentLoaded", () => {
     Promise.all([
@@ -21,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ])
     // displays the images for the top picks, taylor picks, and danny picks. Also displays the first info for top picks
         .then(data => {
+            allAnime = [...data[0], ...data[1], ...data[2]]
+            console.log(allAnime)
             renderTopPicks(data[0])
             renderDannyPicks(data[1])
             renderTaylorPicks(data[2])
@@ -98,3 +104,22 @@ titleHeader.addEventListener("mouseout",(e)=>{
     titleHeader.className=""
     console.log(titleHeader.className)
 })
+
+function randomNumber(min, max) { 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+randomAnime.addEventListener("click", () => {
+    displayInfo(allAnime[randomNumber(1, 15)])
+})
+
+addTo.addEventListener("click", (e) => {
+    let img = document.createElement("img")
+    img.className = "imageTile"
+    img.src = currentAnime.image
+    watchList.append(img)
+    img.addEventListener("click", () => {
+        img.remove()
+    })
+})
+  

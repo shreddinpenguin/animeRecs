@@ -26,7 +26,8 @@ footer {
 }
 
 .flexbox-titles {
-    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .flexbox-container-right {
@@ -150,18 +151,17 @@ body {
     align-items: center;
 }
 
-button {
-    margin: auto;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
+#watched {
+    text-align: center;
+    margin-bottom: 7px;
+    /* display: flex; */
     border: 0;
     width:150px;
     color: whitesmoke;
     background: black; 
     padding: 10px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Fantsy copperplate', cursive;
 }
 
@@ -182,4 +182,52 @@ button {
     margin: 60px;
 }
 
+#random-button {
+    display: flex;
+    justify-content: flex;
+    
+}
+
+
+#random {
+    margin: auto;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    width:150px;
+    color: whitesmoke;
+    background: black; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Fantsy copperplate', cursive;
+}
+
+#add-watch {
+    /* display: flex; */
+    margin-bottom: 7px;
+    text-align: center;
+    margin-bottom: 7px;
+    /* display: flex; */
+    border: 0;
+    width:150px;
+    color: whitesmoke;
+    background: black; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Fantsy copperplate', cursive;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#watchlist {
+    display: flex;
+}
 
