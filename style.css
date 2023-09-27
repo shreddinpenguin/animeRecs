@@ -7,10 +7,8 @@
 }
 
 .flexbox-titles {
-    /* background-color: #000000; */
-    /* margin: auto; */
     justify-content: flex-start;
-    /* border: 3px solid white; */
+    flex-wrap: wrap;
 }
 
 .flexbox-container-right {
@@ -23,7 +21,7 @@
 }
 
 .flexbox-display {
-    border: 3px solid black;
+    border: 3px solid #e3e3e3;
     margin: 10px;
     align-items: center;
     flex-direction: column;
@@ -37,6 +35,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 7px;
+    border: 3px solid black;
 }
 
 .imageTile:hover{
@@ -122,9 +121,6 @@ body {
 }
 #watched {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
     margin-bottom: 7px;
 }
 header {
@@ -145,4 +141,17 @@ footer {
 }
 #black {
     color:black;
+}
+
+#add-watch {
+    display: flex;
+    margin-bottom: 7px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+}
+#watchlist {
+    display: flex;
 }

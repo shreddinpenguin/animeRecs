@@ -10,6 +10,8 @@ const animeYear = document.querySelector("#year-aired")
 const animeDescription = document.querySelector("#description")
 const watched = document.querySelector("#watched")
 const animeEpisodes = document.querySelector("#episode-count")
+const addTo = document.querySelector("#add-watch")
+const watchList = document.querySelector("#watchlist")
 let currentAnime;
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -112,3 +114,14 @@ function watchedUnwatched (event) {
         return "Unwatched"
     }
 }
+
+addTo.addEventListener("click", (e)=>{
+    let img = document.createElement("img")
+    img.className = "imageTile"
+    img.src = currentAnime.image
+    watchList.append(img)
+    img.addEventListener("click", ()=>{
+        img.remove()
+    })
+})
+
