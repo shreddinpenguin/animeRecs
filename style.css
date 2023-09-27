@@ -1,14 +1,23 @@
 #title_header {
     font-style: italic;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:  'Segoe UI', Arial, sans-serif;
     font-size: 3rem;
     color: whitesmoke;
+    display: flex;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    height: 75px;
+    width: auto;
 }
 
 header {
     background-color: black;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 footer {
@@ -39,7 +48,7 @@ footer {
 }
 
 .flexbox-display {
-    border: 3px solid whitesmoke;
+    border: 3px solid #8f0505;
     margin: 10px;
     justify-content: center;
     align-items: center;
@@ -52,6 +61,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid whitesmoke;
 }
 
 .imageTile:hover{
@@ -124,22 +134,26 @@ body {
 #title {
     text-align: center;
     color: whitesmoke;
+    font-family:  'Segoe UI', Arial, sans-serif;
 }
 
 #year-aired {
     text-align: center;
     color: whitesmoke;
+    font-family:  'Segoe UI', Arial, sans-serif;
 }
 
 #description {
     display: flex;
     text-align: center;
     color: whitesmoke;
+    font-family:  'Segoe UI', Arial, sans-serif;
 }
 
 #episode-count {
     text-align: center;
     color: whitesmoke;
+    font-family:  'Segoe UI', Arial, sans-serif;
 }
 
 #display-picks {
@@ -151,18 +165,22 @@ body {
     align-items: center;
 }
 
+h3 {
+    font-family:  'Segoe UI', Arial, sans-serif;
+}
+
 #watched {
     text-align: center;
     margin-bottom: 7px;
-    /* display: flex; */
-    border: 0;
+    margin-left: 7px;
+    border: 3px solid whitesmoke;
     width:150px;
     color: whitesmoke;
     background: black; 
     padding: 10px;
     border-radius: 5px;
     font-size: 15px;
-    font-family: 'Fantsy copperplate', cursive;
+    font-family:  'Segoe UI', Arial, sans-serif;
 }
 
 #detail-image {
@@ -192,38 +210,36 @@ body {
 #random {
     margin: auto;
     margin-bottom: 7px;
-    margin-top: 7px;
     display: flex;
     justify-content: center;
-    border: 0;
+    border: 3px solid whitesmoke;
     width:150px;
     color: whitesmoke;
     background: black; 
     padding: 10px;
     border-radius: 5px;
     font-size: 15px;
-    font-family: 'Fantsy copperplate', cursive;
+    font-family:  'Segoe UI', Arial, sans-serif;
 }
 
 #add-watch {
-    /* display: flex; */
+    margin-right: 7px;
     margin-bottom: 7px;
     text-align: center;
     margin-bottom: 7px;
-    /* display: flex; */
-    border: 0;
+    border: 3px solid whitesmoke;
     width:150px;
     color: whitesmoke;
     background: black; 
     padding: 10px;
     border-radius: 5px;
     font-size: 15px;
-    font-family: 'Fantsy copperplate', cursive;
+    font-family:  'Segoe UI', Arial, sans-serif;
 }
 
 #buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
