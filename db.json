@@ -5,7 +5,7 @@
       "Title": "Fullmetal Alchemist: Brotherhood",
       "image": "https://m.media-amazon.com/images/M/MV5BZmEzN2YzOTItMDI5MS00MGU4LWI1NWQtOTg5ZThhNGQwYTEzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
       "description": "Disregard for alchemy’s laws ripped half of Ed Elric’s limbs from his body and left Al’s soul clinging to a suit of armor. To restore what was lost, the brothers seek the Philosopher’s Stone. Enemies and allies – the corrupt military, the Homunculi, and foreign alchemists – will alter the Elric’s course, but their purpose will remain unchanged and their bond unbreakable",
-      "watched": true,
+      "watched": false,
       "episode_count": 68,
       "aired": 2009
     },
@@ -79,7 +79,7 @@
       "Title": "Hunter x Hunter",
       "image": "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/cbb55a6382682bf71e91f685c6473c5a.jpe",
       "description": "Gon, a young boy who lives on Whale Island, dreams of becoming a Hunter like his father, who left when Gon was still young.",
-      "watched": true,
+      "watched": false,
       "episode_count": 148,
       "aired": 2011
     },
@@ -135,7 +135,7 @@
       "Title": "The Future Diary",
       "image": "https://m.media-amazon.com/images/M/MV5BMjExOWYzMTQtMjYzNi00MmU0LWJiZDctMmNmZmFhNGI5MWI0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
       "description": "A young man competes with people around the world for a chance to become the succesor of God, with a diary that is able to tell the future.",
-      "watched": true,
+      "watched": false,
       "episode_count": 27,
       "aired": 2011
     }
