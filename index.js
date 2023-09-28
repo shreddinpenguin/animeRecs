@@ -152,4 +152,21 @@ function watchedUpdate(event){
             .then(data => console.log(data))
     ])  
 }
-  
+// creates variables that target the root css colors and the buttons for light and dark mode
+const rootStyles = document.querySelector(":root")
+const lightModeButton = document.querySelector("#lightMode")
+const darkModeButton = document.querySelector("#darkMode")
+// Eventlistener that changes the colors from dark mode colors to light mode colors after the light mode icon is clicked
+lightModeButton.addEventListener("click", ()=>{
+    rootStyles.style.setProperty('--body-color', '#e3e3e3');
+    rootStyles.style.setProperty('--header-footer-color', '#1877f2');
+    rootStyles.style.setProperty('--text-border-color', 'black');
+    rootStyles.style.setProperty('--button-color', 'whitesmoke');
+})
+// Eventlistener that changes the colors back to dark mode colors after the dark mode icon is clicked
+darkModeButton.addEventListener("click", ()=>{
+    rootStyles.style.setProperty('--body-color', '#8f0505');
+    rootStyles.style.setProperty('--header-footer-color', 'black');
+    rootStyles.style.setProperty('--text-border-color', 'whitesmoke');
+    rootStyles.style.setProperty('--button-color', 'black');
+})
