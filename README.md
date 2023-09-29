@@ -1,6 +1,11 @@
 ## Installation:
-    1. run json-server --watch db.json()
-    2. open index.html
+    1. open your computer terminal
+    2. clone the github ssh link from the github
+    3. git clone with the copied link in your terminal 
+    4. then cd into the name
+    5. open the vs code with the command code . in the terminal
+    6. run json-server --watch db.json() in the terminal 
+    7. open index.html either with the command for your type of computer or with liveserver
 
 ## Usage:
     1. Displays the most popular anime images
@@ -12,4 +17,3 @@
     7. In the watchlist you can hover over an image to make the image larger and you can click the image to remove the image from your watchlist
     8. The anime recs title has a mouseover and mouseout event that makes the text and logos to fade in and out
     9. There are 2 buttons in the top right hand corner that have a picture of a moon and sun for light mode and dark mode. When you click either one it changes the css colors from dark colors to lighter colors depending on which one you click
-    
